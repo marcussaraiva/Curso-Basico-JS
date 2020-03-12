@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN-RJ</title>
+    <style>
+        body{
+            background: rgb(0, 174, 255);
+            font: normal 20px Arial;
+            
+        }
+        h1{
+            text-shadow: 2px 2px 2px grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="txtVelocidade" id="txtVelocidade">
+    <input type="button" value="Verificar" onclick="calcular()">
+    
+    <div id="lblResposta">
+        Status
+    </div>
+    <script>
+        
+        
+
+        function calcular(){ 
+            
+            var divResposta = window.document.querySelector('div#lblResposta');
+            var txtVelocidade = window.document.querySelector('input#txtVelocidade');
+            var velocidade = Number(txtVelocidade.value);
+            
+            if (velocidade > 60) {
+                divResposta.style.background = 'grey';
+                divResposta.style.color = 'red';
+                divResposta.innerHTML = `<p>Sua Velocidade é de <strong>${velocidade} Km/h</strong></p>`;
+                divResposta.innerHTML += `<p>Acima do limite permitido. <strong>MULTADO</strong></p>`;
+            } else {
+                divResposta.style.background = 'grey';
+                divResposta.style.color = 'green';
+                divResposta.innerHTML = `<p>Sua Velocidade é de <strong>${velocidade} Km/h</strong></p>`;
+                divResposta.innerHTML += `<p>Dentro do limite permitido.</p>`;
+            }    
+        }
+
+    </script>
+</body>
+</html>

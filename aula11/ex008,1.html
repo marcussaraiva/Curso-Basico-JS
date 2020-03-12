@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo</title>
+    <style>
+        body{
+            background: rgba(202, 171, 34, 0.74);
+            font: normal 20px Capture it;
+            color: rgb(0, 99, 5);
+            
+        }
+        h1{
+            text-shadow: 2px 2px 2px grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Alistamento</h1>
+
+    <p>Nome: <input type="text" name="txtNome" id="txtNome"></p>
+    <p>Nacionalidade: <input type="text" name="txtNacionalidade" id="txtNacionalidade"></p>
+    <p><input type="button" value="Confirmar Alistamento" onclick="alistar()"></p>
+    <div id="divStatus">
+
+    </div>
+    <script>
+        
+
+        function alistar(){
+        
+            var txtNome = window.document.querySelector('input#txtNome');
+            var txtNacionalidade = window.document.querySelector('input#txtNacionalidade');
+            var divStatus = window.document.querySelector('div#divStatus')
+
+            var nome = String(txtNome.value);
+            var nacionalidade = String(txtNacionalidade.value);
+            divStatus.innerHTML =`Seja Bem Vindo, ${nome}!`;
+
+            if (nacionalidade == 'Brasileiro') {
+                divStatus.style.color = 'green';
+                divStatus.innerHTML += `<p>Você está <strong>Alistado</strong> no EB</p>`
+            } else {
+                divStatus.style.color = 'red';
+                divStatus.innerHTML += `<p>Você <strong>Não Pode</strong> se alistar no EB</p>`
+            }
+            
+            divStatus.innerHTML += `Brasil acima de todos, Abaixo de Deus!`
+        }
+    </script>
+    
+</body>
+</html>

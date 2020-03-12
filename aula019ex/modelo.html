@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e Arrays</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador De Numeros</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                Número (entre 1 e 100): 
+                <input type="number" id="iptNumero" placeholder="Digite o Número...">
+                <button onclick="enviar()">Enviar</button>
+            </p>
+        </div>
+        <div>
+            <table class="bordaSimples" id="tabela">
+                <tr>
+                    <th class="bordaSimples th">Número</th>
+                    <th class="bordaSimples th">Status</th>
+                </tr>
+            </table>
+            <p><button onclick="finalizar()">Finalizar</button></p>
+            <div id="resposta"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="sript.js"></script>
+
+</body>
+</html>

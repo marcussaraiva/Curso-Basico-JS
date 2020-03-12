@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var salario = Number(window.prompt('Salario: '));
+        document.write(`Seu Salario é ${salario.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}`);
+    </script>
+
+</body>
+</html>
